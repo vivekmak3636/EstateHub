@@ -1,0 +1,177 @@
+
+.estate-search-bar {
+  display: grid;
+  grid-template-columns: minmax(180px, 1.5fr) minmax(150px, 1fr) minmax(145px, 0.9fr) auto;
+  align-items: end;
+  gap: 16px;
+  width: 100%;
+  padding: 22px;
+  border: 1px solid #e0e7ef;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 10px 32px rgba(6, 26, 47, 0.08);
+  box-sizing: border-box;
+}
+
+.estate-search-bar *,
+.estate-search-bar *::before,
+.estate-search-bar *::after {
+  box-sizing: border-box;
+}
+
+.estate-search-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+}
+
+.estate-search-field > label {
+  color: #102642;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.estate-search-input-wrap {
+  position: relative;
+  min-width: 0;
+}
+
+.estate-search-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  color: #b78317;
+  font-size: 20px;
+  line-height: 1;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.estate-search-bar input,
+.estate-search-bar select {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: 47px;
+  padding: 11px 12px;
+  border: 1px solid #d6e0eb;
+  border-radius: 8px;
+  outline: none;
+  background: #ffffff;
+  color: #18324a;
+  font-family: inherit;
+  font-size: 13px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.estate-search-bar .estate-search-input-wrap input {
+  padding-left: 39px;
+}
+
+.estate-search-bar input::placeholder {
+  color: #94a3b8;
+}
+
+.estate-search-bar input:focus,
+.estate-search-bar select:focus {
+  border-color: #d6aa4d;
+  box-shadow: 0 0 0 3px rgba(214, 170, 77, 0.16);
+}
+
+.estate-search-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.estate-search-submit,
+.estate-search-reset {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 47px;
+  padding: 0 17px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.estate-search-submit {
+  border: 1px solid #d6aa4d;
+  background: #d6aa4d;
+  color: #061a2f;
+}
+
+.estate-search-submit > span {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.estate-search-submit:hover {
+  background: #e8c46e;
+  box-shadow: 0 5px 14px rgba(167, 119, 22, 0.15);
+  transform: translateY(-1px);
+}
+
+.estate-search-reset {
+  border: 1px solid #d6e0eb;
+  background: #ffffff;
+  color: #344a62;
+}
+
+.estate-search-reset:hover {
+  border-color: #d6aa4d;
+  background: #fffaf0;
+}
+
+.estate-search-submit:focus-visible,
+.estate-search-reset:focus-visible {
+  outline: 3px solid rgba(214, 170, 77, 0.35);
+  outline-offset: 3px;
+}
+
+@media (max-width: 1000px) {
+  .estate-search-bar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .estate-search-actions {
+    grid-column: 1 / -1;
+  }
+
+  .estate-search-submit {
+    flex: 1;
+  }
+}
+
+@media (max-width: 560px) {
+  .estate-search-bar {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    padding: 17px;
+    border-radius: 11px;
+  }
+
+  .estate-search-actions {
+    grid-column: auto;
+    width: 100%;
+  }
+
+  .estate-search-submit {
+    flex: 1;
+  }
+
+  .estate-search-bar input,
+  .estate-search-bar select {
+    height: 48px;
+    font-size: 14px;
+  }
+}

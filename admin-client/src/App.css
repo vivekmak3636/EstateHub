@@ -1,0 +1,351 @@
+
+.admin-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-header {
+  min-height: 76px;
+  padding: 18px 7%;
+  background: var(--navy);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 3px solid var(--gold);
+}
+
+.admin-header h1 {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.admin-header span {
+  color: var(--gold);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.admin-welcome {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.welcome-card {
+  width: 100%;
+  max-width: 720px;
+  padding: 48px;
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  box-shadow: 0 12px 40px rgba(6, 26, 47, 0.08);
+}
+
+.welcome-label {
+  margin-bottom: 14px;
+  color: #A47B25;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.welcome-card h2 {
+  margin-bottom: 16px;
+  color: var(--navy);
+  font-size: clamp(26px, 4vw, 38px);
+  line-height: 1.25;
+}
+
+.welcome-card > p:not(.welcome-label) {
+  color: var(--muted-color);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.welcome-button {
+  margin-top: 26px;
+  padding: 13px 24px;
+  background: var(--gold);
+  color: var(--navy);
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 800;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.welcome-button:hover {
+  background: #E5BD69;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .admin-header {
+    padding: 16px 20px;
+  }
+
+  .admin-header h1 {
+    font-size: 22px;
+  }
+
+  .welcome-card {
+    padding: 28px 22px;
+  }
+}
+
+.admin-dashboard-placeholder {
+  min-height: 100vh;
+  padding: 32px;
+  background: #f4f7fb;
+}
+
+.admin-dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 26px;
+  border-radius: 14px;
+  background: #061a2f;
+  color: #ffffff;
+}
+
+.admin-dashboard-brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.admin-dashboard-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  background: #d6aa4d;
+  color: #061a2f;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.admin-dashboard-brand h1 {
+  font-size: 23px;
+}
+
+.admin-dashboard-brand h1 span {
+  color: #d6aa4d;
+}
+
+.admin-dashboard-brand p {
+  margin-top: 4px;
+  color: #c2cfdd;
+  font-size: 12px;
+}
+
+.admin-dashboard-logout {
+  padding: 11px 18px;
+  border: 1px solid #d6aa4d;
+  border-radius: 8px;
+  background: transparent;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.admin-dashboard-logout:hover {
+  background: #d6aa4d;
+  color: #061a2f;
+}
+
+.admin-dashboard-welcome {
+  max-width: 760px;
+  margin: 65px auto;
+  padding: 45px;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 12px 35px rgba(6, 26, 47, 0.06);
+  text-align: center;
+}
+
+.admin-dashboard-welcome-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 22px;
+  border-radius: 50%;
+  background: #e8f5ed;
+  color: #26834b;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.admin-dashboard-eyebrow {
+  margin-bottom: 12px;
+  color: #a47b25;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.admin-dashboard-welcome h2 {
+  margin-bottom: 15px;
+  color: #061a2f;
+  font-size: clamp(27px, 4vw, 36px);
+}
+
+.admin-dashboard-description {
+  max-width: 540px;
+  margin: 0 auto;
+  color: #718096;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.admin-dashboard-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 32px;
+  text-align: left;
+}
+
+.admin-dashboard-info > div {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding: 18px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  overflow-wrap: anywhere;
+}
+
+.admin-dashboard-info > div > span {
+  color: #718096;
+  font-size: 12px;
+}
+
+.admin-dashboard-info strong {
+  color: #061a2f;
+  font-size: 14px;
+}
+
+.admin-dashboard-info .admin-role-badge {
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: #fff5dc;
+  color: #8b6722;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+@media (max-width: 600px) {
+  .admin-dashboard-placeholder {
+    padding: 16px;
+  }
+
+  .admin-dashboard-header {
+    padding: 16px;
+  }
+
+  .admin-dashboard-brand h1 {
+    font-size: 19px;
+  }
+
+  .admin-dashboard-welcome {
+    margin: 28px auto;
+    padding: 28px 20px;
+  }
+
+  .admin-dashboard-info {
+    grid-template-columns: 1fr;
+  }
+}
+.ad-stat-card,
+.au-stat-card,
+.enquiry-stat-card,
+.admin-profile-card,
+.admin-profile-details,
+.property-review-card,
+.property-review-actions-card,
+.au-list-card,
+.ad-properties-section {
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.ad-stat-card:hover,
+.au-stat-card:hover,
+.enquiry-stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(6, 26, 47, 0.09);
+}
+
+.ad-stat-icon,
+.au-stat-icon {
+  transition: transform 0.25s ease;
+}
+
+.ad-stat-card:hover .ad-stat-icon,
+.au-stat-card:hover .au-stat-icon {
+  transform: scale(1.08) rotate(-4deg);
+}
+
+.ad-view-all,
+.ad-approval-banner button,
+.au-refresh-button,
+.au-action-button,
+.admin-profile-logout,
+.property-review-approve,
+.property-review-reject {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.ad-view-all:hover,
+.ad-approval-banner button:hover,
+.au-refresh-button:hover,
+.au-action-button:hover,
+.admin-profile-logout:hover,
+.property-review-approve:hover,
+.property-review-reject:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(6, 26, 47, 0.1);
+}
+
+.ad-content,
+.au-content {
+  animation: estatehub-content-enter 0.4s ease both;
+}
+
+@keyframes estatehub-content-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ad-content,
+  .au-content,
+  .ad-stat-card,
+  .au-stat-card,
+  .enquiry-stat-card {
+    animation: none !important;
+    transition: none !important;
+  }
+}

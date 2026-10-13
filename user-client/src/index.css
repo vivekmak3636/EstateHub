@@ -1,0 +1,208 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+
+/* ==================================
+   ESTATEHUB GLOBAL ANIMATIONS
+   Navy + Gold Theme
+================================== */
+
+:root {
+  --eh-navy: #061A2F;
+  --eh-gold: #D6AA4D;
+  --eh-transition: 0.3s ease;
+}
+
+:root {
+  --font-body: "Inter", sans-serif;
+  --font-heading: "Playfair Display", serif;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.splash-title,
+.post-property-header h1 {
+  font-family: var(--font-heading);
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Page entrance */
+@keyframes ehFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes ehSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ehSlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes ehZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes ehSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Reusable animation classes */
+.eh-fade-in {
+  animation: ehFadeIn 0.7s ease both;
+}
+
+.eh-slide-up {
+  animation: ehSlideUp 0.7s ease both;
+}
+
+.eh-slide-right {
+  animation: ehSlideRight 0.7s ease both;
+}
+
+.eh-zoom-in {
+  animation: ehZoomIn 0.6s ease both;
+}
+
+/* Buttons */
+button,
+.home-btn,
+.home-owner-button,
+.home-search-button {
+  transition:
+    transform var(--eh-transition),
+    box-shadow var(--eh-transition),
+    background-color var(--eh-transition);
+}
+
+.home-btn:hover,
+.home-owner-button:hover,
+.home-search-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(6, 26, 47, 0.18);
+}
+
+/* Property cards */
+.home-property-card {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.home-property-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 16px 35px rgba(6, 26, 47, 0.14);
+}
+
+/* Property images */
+.home-property-image-wrap {
+  overflow: hidden;
+}
+
+.home-property-image {
+  transition: transform 0.5s ease;
+}
+
+.home-property-card:hover .home-property-image {
+  transform: scale(1.06);
+}
+
+/* Purpose cards */
+.home-purpose-card {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.home-purpose-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(6, 26, 47, 0.12);
+}
+
+/* Form controls */
+input,
+select,
+textarea {
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--eh-gold);
+  box-shadow: 0 0 0 3px rgba(214, 170, 77, 0.18);
+}
+
+/* Loading spinner */
+.home-spinner {
+  animation: ehSpin 0.8s linear infinite;
+}
+
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body{
+
+}

@@ -1,0 +1,233 @@
+/* =================================
+   ESTATEHUB ENQUIRY FORM
+   Navy Blue + Golden Yellow
+================================= */
+
+.enquiry-form {
+  width: 100%;
+  padding: 28px;
+  border: 1px solid #dce5f0;
+  border-radius: 15px;
+  background: #ffffff;
+  color: #172b45;
+  box-shadow: 0 8px 24px rgba(7, 27, 52, 0.05);
+  box-sizing: border-box;
+}
+
+.enquiry-form * {
+  box-sizing: border-box;
+}
+
+/* Form Heading */
+
+.enquiry-form-heading {
+  margin-bottom: 25px;
+}
+
+.enquiry-form-eyebrow {
+  display: inline-block;
+  margin-bottom: 9px;
+  color: #a87508;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.enquiry-form-heading h2 {
+  margin: 0 0 9px;
+  color: #071b34;
+  font-size: 27px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.enquiry-form-heading p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* Input Grid */
+
+.enquiry-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.enquiry-field {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 9px;
+}
+
+.enquiry-field-full {
+  grid-column: 1 / -1;
+}
+
+/* Labels */
+
+.enquiry-field label {
+  color: #102642;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.enquiry-field label span {
+  color: #b78317;
+}
+
+/* Inputs */
+
+.enquiry-field input,
+.enquiry-field textarea,
+.enquiry-field select {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 13px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+  background: #ffffff;
+  color: #172b45;
+  font: inherit;
+  font-size: 14px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.enquiry-field input {
+  min-height: 47px;
+}
+
+.enquiry-field textarea {
+  min-height: 135px;
+  resize: vertical;
+  line-height: 1.7;
+}
+
+.enquiry-field input::placeholder,
+.enquiry-field textarea::placeholder {
+  color: #94a3b8;
+}
+
+.enquiry-field input:focus,
+.enquiry-field textarea:focus,
+.enquiry-field select:focus {
+  border-color: #c49a3a;
+  box-shadow: 0 0 0 3px rgba(214, 170, 77, 0.18);
+}
+
+.enquiry-field input:disabled,
+.enquiry-field textarea:disabled {
+  background: #f1f5f9;
+  cursor: not-allowed;
+}
+
+/* Feedback Messages */
+
+.enquiry-feedback {
+  margin-top: 20px;
+  padding: 13px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.enquiry-feedback-success {
+  border: 1px solid #a7d9b4;
+  background: #edf9f0;
+  color: #176534;
+}
+
+.enquiry-feedback-error {
+  border: 1px solid #f0b8b8;
+  background: #fff1f1;
+  color: #a32121;
+}
+
+/* Submit Button */
+
+.enquiry-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 49px;
+  margin-top: 23px;
+  padding: 13px 20px;
+  border: 1px solid #d6aa4d;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #e9c264, #d6aa4d);
+  color: #071b34;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.enquiry-submit-btn:hover:not(:disabled) {
+  background: #f0ce78;
+  box-shadow: 0 5px 14px rgba(167, 119, 22, 0.15);
+  transform: translateY(-1px);
+}
+
+.enquiry-submit-btn:focus-visible {
+  outline: 3px solid rgba(214, 170, 77, 0.4);
+  outline-offset: 3px;
+}
+
+.enquiry-submit-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Footer Note */
+
+.enquiry-form-note {
+  margin: 13px 0 0;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 600px) {
+  .enquiry-form {
+    padding: 20px;
+  }
+
+  .enquiry-form-heading h2 {
+    font-size: 24px;
+  }
+
+  .enquiry-form-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 17px;
+  }
+
+  .enquiry-field-full {
+    grid-column: auto;
+  }
+
+  .enquiry-field input,
+  .enquiry-field textarea,
+  .enquiry-field select {
+    font-size: 16px;
+  }
+
+  .enquiry-submit-btn {
+    min-height: 48px;
+  }
+}

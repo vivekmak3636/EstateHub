@@ -1,0 +1,360 @@
+.splash-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  isolation: isolate;
+  color: #fff;
+  background: #06111f;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+.splash-background {
+  position: absolute;
+  inset: -3%;
+  z-index: -3;
+  background:
+    linear-gradient(180deg,
+      rgba(4, 14, 27, 0.5),
+      rgba(4, 14, 27, 0.95)),
+    linear-gradient(90deg,
+      rgba(6, 26, 47, 0.96),
+      rgba(9, 27, 45, 0.75),
+      rgba(6, 26, 47, 0.96)),
+    url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2200&q=85") center / cover no-repeat;
+  filter: saturate(0.75);
+  animation: splashBackgroundMove 12s ease-in-out infinite alternate;
+}
+
+.splash-screen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at center,
+      transparent 10%,
+      rgba(2, 9, 18, 0.42) 100%),
+    linear-gradient(0deg,
+      rgba(3, 10, 19, 0.7),
+      transparent 40%,
+      rgba(3, 10, 19, 0.3));
+}
+
+.splash-glow {
+  position: absolute;
+  z-index: -1;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(100px);
+  background: rgba(214, 170, 77, 0.12);
+}
+
+.splash-glow-one {
+  top: -200px;
+  left: -120px;
+}
+
+.splash-glow-two {
+  right: -180px;
+  bottom: -220px;
+  background: rgba(26, 91, 135, 0.2);
+}
+
+.splash-particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.splash-particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #f4d28a;
+  box-shadow: 0 0 12px rgba(214, 170, 77, 0.9);
+}
+
+.splash-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(90%, 560px);
+  text-align: center;
+}
+
+.splash-logo {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+  color: #e9c474;
+  filter: drop-shadow(0 0 25px rgba(214, 170, 77, 0.3));
+}
+
+.splash-logo-ring {
+  position: absolute;
+  inset: 5px;
+  border: 1px solid rgba(214, 170, 77, 0.45);
+  border-radius: 50%;
+  border-top-color: #f8dda0;
+  border-bottom-color: transparent;
+}
+
+.splash-logo-orbit {
+  position: absolute;
+  inset: -4px;
+  border: 1px solid transparent;
+  border-right-color: rgba(214, 170, 77, 0.7);
+  border-radius: 50%;
+}
+
+.splash-house-icon {
+  width: 84px;
+  height: 84px;
+  filter: drop-shadow(0 0 10px rgba(214, 170, 77, 0.35));
+}
+
+.splash-title {
+  margin: 0;
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(43px, 7vw, 76px);
+  font-weight: 500;
+  line-height: 1.15;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+}
+
+.splash-title span {
+  color: #e6bf70;
+}
+
+.splash-divider {
+  height: 2px;
+  margin: 22px 0 16px;
+  background: linear-gradient(90deg,
+      transparent,
+      #d6aa4d,
+      #fff0c2,
+      #d6aa4d,
+      transparent);
+  box-shadow: 0 0 15px rgba(214, 170, 77, 0.5);
+}
+
+.splash-tagline {
+  margin: 0;
+  color: #e5e8ed;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 6px;
+}
+
+.splash-tagline span {
+  padding: 0 4px;
+  color: #d6aa4d;
+}
+
+/* Smooth Progress Bar */
+
+.splash-loader {
+  width: min(340px, 80vw);
+  margin: 38px auto 0;
+}
+
+.splash-loader-track {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.splash-loader-fill {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg,
+      #a8792d 0%,
+      #dfb65f 45%,
+      #ffe6a3 100%);
+  transform: scaleX(0);
+  transform-origin: left center;
+  will-change: transform;
+  box-shadow: 0 0 12px rgba(223, 182, 95, 0.4);
+}
+
+.splash-loader-shine {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35px;
+  height: 100%;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.85));
+  filter: blur(1px);
+}
+
+.splash-loading-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 13px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.splash-loading-info span:last-child {
+  min-width: 38px;
+  color: #e6bd68;
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+@media (max-width: 480px) {
+  .splash-loader {
+    width: min(300px, 82vw);
+    margin-top: 30px;
+  }
+
+  .splash-loading-info {
+    font-size: 0.58rem;
+    letter-spacing: 0.08em;
+  }
+}
+
+
+.splash-loading-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 12px;
+  color: #c2c9d2;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.splash-loading-info span:last-child {
+  color: #e9c474;
+  font-variant-numeric: tabular-nums;
+}
+
+.splash-bottom-text {
+  margin: 32px 0 0;
+  color: #d7dce4;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 14px;
+  font-style: italic;
+  letter-spacing: 1.5px;
+}
+
+.splash-corner {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  border-color: rgba(214, 170, 77, 0.55);
+  border-style: solid;
+}
+
+.splash-corner-tl {
+  top: 25px;
+  left: 25px;
+  border-width: 1px 0 0 1px;
+}
+
+.splash-corner-br {
+  right: 25px;
+  bottom: 25px;
+  border-width: 0 1px 1px 0;
+}
+
+.splash-version {
+  position: absolute;
+  right: 32px;
+  bottom: 28px;
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+@keyframes splashBackgroundMove {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.07);
+  }
+}
+
+@media (max-width: 600px) {
+  .splash-logo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .splash-house-icon {
+    width: 68px;
+    height: 68px;
+  }
+
+  .splash-tagline {
+    font-size: 9px;
+    letter-spacing: 3px;
+  }
+
+  .splash-loader {
+    margin-top: 42px;
+  }
+
+  .splash-loading-info {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .splash-corner {
+    width: 25px;
+    height: 25px;
+  }
+
+  .splash-corner-tl {
+    top: 15px;
+    left: 15px;
+  }
+
+  .splash-corner-br {
+    right: 15px;
+    bottom: 15px;
+  }
+
+  .splash-version {
+    right: 15px;
+    bottom: 12px;
+    font-size: 7px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .splash-background {
+    animation: none;
+  }
+}
