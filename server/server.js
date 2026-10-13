@@ -27,6 +27,8 @@ const allowedOrigins = [
   process.env.CLIENT_URL,
   "http://localhost:5173",
   "http://localhost:5174",
+  "https://estatehub-admin.vercel.app",
+  "https://estatehub-user.vercel.app"
 ].filter(Boolean);
 
 app.use(
